@@ -20,7 +20,7 @@ const ChatMessage = ({ message }: ChatMessageProps) => {
             : 'bg-gray-200 text-gray-800 rounded-bl-none'
         }`}
       >
-        <p className="text-sm">{message.text}</p>
+        <p className="text-sm">{message.content ?? message.text}</p>
         <p className="text-xs opacity-70 mt-1">
           {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
         </p>
