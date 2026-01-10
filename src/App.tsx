@@ -6,7 +6,7 @@ import type { Message } from './types/chat';
 import axios from 'axios';
 import { FaSpinner } from 'react-icons/fa';
 
-const N8N_WEBHOOK_URL = 'https://your-n8n-instance.com/webhook/taskbot';
+const N8N_WEBHOOK_URL = (import.meta.env.VITE_N8N_WEBHOOK_URL as string) || 'https://your-n8n-instance.com/webhook/taskbot';
 
 function App() {
   const [messages, setMessages] = useState<Message[]>([
