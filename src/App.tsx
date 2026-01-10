@@ -7,8 +7,8 @@ import type { Message } from './types/chat';
 import { Bot, ChevronDown, Users, Zap } from 'lucide-react';
 
 // ✅ URL CORRECTA para desarrollo local
-const N8N_WEBHOOK_URL = import.meta.env.VITE_N8N_WEBHOOK_URL || 'http://localhost:5678/webhook/taskbot';
-
+const N8N_WEBHOOK_URL = import.meta.env.VITE_N8N_WEBHOOK_URL || 
+  'https://buddy-unknotty-pattie.ngrok-free.dev/webhook/taskbot';
 function App() {
   const [messages, setMessages] = useState<Message[]>([
     {
